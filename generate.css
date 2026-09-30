@@ -1,0 +1,508 @@
+.gen-container {
+  display: flex;
+  height: 89vh;
+  overflow: hidden; /* Hide overflow to prevent page scrolling */
+}
+
+.gen-left {
+  width: 40%;
+  overflow-y: hidden; /* Enable vertical scrollbar for content overflow */
+  padding: 20px;
+  border-right: 1px solid #ccc; /* Divider line between left and right */
+}
+
+.gen-head {
+  position: relative;
+  margin-left: 40px;
+  font-size: 2rem;
+  font-weight: bolder;
+  color: #fed766;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  text-shadow: -3px 0px 0px #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+.boxes-container {
+  display: flex;
+  justify-content: center; /* Center align the boxes horizontally */
+  align-items: flex-start; /* Align items to the start vertically */
+  margin-top: 20px; /* Space between the main heading and the boxes */
+}
+
+.box-wrapper {
+  display: flex;
+  flex-direction: column; /* Align items vertically */
+  align-items: center; /* Center align the content inside the box */
+  margin: 0 50px; /* Space between the boxes */
+}
+
+.box-heading {
+  margin-bottom: 10px; /* Space between heading and box */
+  font-size: 1.2em;
+  color: #ffffff;
+}
+
+.box {
+  width: 130px; /* Width of the boxes */
+  height: 35px; /* Height of the boxes */
+  display: flex;
+  justify-content: center; /* Center align the icon inside the box */
+  align-items: center;
+  border: 2px solid #000; /* Border for the boxes */
+  border-radius: 10px; /* Rounded corners */
+  background-color: #87bba2; /* Background color */
+  padding: 10px; /* Padding inside the box */
+  text-align: center; /* Center align text inside the box */
+  cursor: pointer;
+}
+
+#magic{
+  height: 42px;
+  width: 42px;
+}
+
+.generatebg {
+  width: 59.7%;
+  height: 35%;
+  position: absolute;
+  top: 45%;
+  right: 0%;
+}
+
+.gen-button{
+  position: absolute;
+  top: 85%;
+  right: 25%;
+  width: 200px;
+  height: 35px;
+  padding-bottom: 3px;
+  border: 2px solid #000;
+  border-radius: 10px;
+  background-color: #fed766;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-weight: 700;
+  padding: 6px;
+  cursor: pointer;
+}
+
+
+.gen-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1; /* Ensure navbar stays above scrollable content */
+  background-color: #838282; /* Optional: Background color for navbar */
+  display: flex;
+  justify-content: space-between; /* Arrange items horizontally with space between */
+  padding-bottom: 10px; /* Optional: Space below headers */
+}
+.gen-nav-item {
+  padding: 4px;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+}
+
+.gen-left form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  /* margin-left: 25px; Adjusted to move form 150px to the left */
+}
+
+.name-input {
+  width: 40%;
+}
+
+.description-input {
+  width: 60%;
+}
+
+.character-row {
+  display: flex;
+  gap: 10px;
+}
+
+.gen-left label {
+  margin-bottom: 10px; /* Adjust spacing as needed */
+  font-weight: bold;
+  color: #22e8b9;
+}
+
+.gen-left input,
+.gen-left textarea,
+.genDialogue {
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 2px solid #000;
+  border-radius: 4px;
+  font-size: 1rem;
+  background-color: #87bba2;
+  /* width: 60%; */
+}
+
+#gdialogue {
+  width: 65%;
+  margin-top: 20px;
+  background-color: #838282;
+}
+
+.gen-nav-item.active {
+  border-bottom-color: #fed766;
+}
+
+.gen-scrollable-content {
+  padding-right: 20px; /* Compensate for scrollbar width */
+  margin-top: 20px; /* Space below navbar */
+  max-height: calc(
+    89vh - 40px
+  ); /* Adjusted to fit remaining height minus navbar and margin */
+  overflow-y: auto; /* Enable scroll if content exceeds height */
+}
+
+.gen-right {
+  width: 60%;
+  padding: 20px;
+  position: relative;
+}
+
+.gen-right img {
+  max-width: 100%;
+  height: auto;
+}
+
+#character-inputs input {
+  width: 30%;
+  margin: 10px;
+}
+
+#character-inputs .character-row .description-input {
+  width: 300px; /* Change this value to your desired width */
+}
+
+#gen-char-save {
+  margin-top: 25px;
+  /* margin: 10px; */
+  padding: 10px;
+  border: 2px solid #000;
+  border-radius: 4px;
+  font-size: 1rem;
+  background-color: #838282;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  width: 35%;
+  cursor: pointer;
+}
+
+.scene-manager {
+  margin-top: 20px; /* Adjust as necessary */
+  overflow: hidden; /* Ensure content doesn't overflow */
+}
+
+.scene-container {
+  margin-bottom: 20px; /* Space between scenes */
+}
+
+.scene-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.scene-heading {
+  margin-right: 10px;
+}
+
+.add-button {
+  border: none;
+  border-radius: 50%;
+  background-color: #fff;
+  color: #000;
+  font-size: 1.5em;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-button:hover {
+  background-color: gray;
+}
+
+.scene-textbox {
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+  box-sizing: border-box;
+}
+
+#gen-sceneinfo {
+  width: 40%;
+  margin-top: 10px; /* Adjust top margin as needed */
+  padding: 10px; /* Padding inside the button */
+  border: 2px solid #000; /* Border style */
+  border-radius: 4px; /* Rounded corners */
+  font-size: 1rem; /* Font size */
+  background-color: #838282; /* Background color */
+  font-family: "Comic Sans MS", cursive, sans-serif; /* Font family */
+  cursor: pointer; /* Cursor style */
+  margin-bottom: 60px;
+}
+
+.gen-scrollable-content {
+  padding-right: 20px; /* Compensate for scrollbar width */
+  margin-top: 20px; /* Space below navbar */
+  max-height: calc(
+    89vh - 40px
+  ); /* Adjusted to fit remaining height minus navbar and margin */
+  overflow-y: auto; /* Enable scroll if content exceeds height */
+}
+
+.story-board-tab {
+  width: 65%;
+}
+
+/* Container for the loading screen */
+/* Container for the loading screen */
+.loading-indicator {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Text and spinner container */
+.loading-content {
+  text-align: center;
+  color: #ffffff;
+  background: linear-gradient(145deg, #333, #222);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Styling for loading text */
+.loading-content p {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  animation: fadeInText 1.5s ease-in-out infinite;
+}
+
+/* Spinner styling */
+.spinner {
+  border: 8px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  border-top: 8px solid #ffffff;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+/* Keyframes for the spinner spinning animation */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Keyframes for text pulsating animation */
+@keyframes fadeInText {
+  0%, 100% { opacity: 0.7; }
+  50% { opacity: 1; }
+}
+
+
+/* New Loading Comic Screen CSS */
+.loading-comic-indicator {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Text and spinner container */
+.loading-comic-indicator .loading-content {
+  text-align: center;
+  color: white;
+  background: linear-gradient(145deg, #444, #333);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+}
+
+/* Styling for loading text */
+.loading-comic-indicator .loading-content p {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+  animation: fadeInText 1.5s ease-in-out infinite;
+}
+
+/* Spinner styling */
+.loading-comic-indicator .spinner {
+  border: 6px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top: 6px solid white;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+}
+
+/* Keyframes for the spinner spinning animation */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Keyframes for text pulsating animation */
+@keyframes fadeInText {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+
+
+/* General hover effects for buttons and interactive elements */
+button, .gen-button, .add-button, #gen-char-save, #gen-sceneinfo, #gdialogue {
+  cursor: pointer; /* Ensure cursor is pointer on hover */
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Hover effect for .gen-button */
+.gen-button:hover {
+  background-color: #e7520e; /* Change background color on hover */
+  color: #fff; /* Change text color on hover */
+}
+
+/* Hover effect for .add-button */
+.add-button:hover {
+  background-color: #ddd; /* Change background color on hover */
+}
+
+/* Hover effect for #gen-char-save */
+#gen-char-save:hover {
+  background-color: #6b6b6b; /* Change background color on hover */
+  color: #fff; /* Change text color on hover */
+}
+
+/* Hover effect for #gen-sceneinfo */
+#gen-sceneinfo:hover {
+  background-color: #6b6b6b; /* Change background color on hover */
+  color: #fff; /* Change text color on hover */
+}
+
+/* Hover effect for #gdialogue */
+#gdialogue:hover {
+  border-color: #87bba2; /* Change border color on hover */
+  background-color: #6b6b6b; /* Change background color on hover */
+  color: #fff; /* Change text color on hover */
+}
+
+/* Hover effect for .gen-nav-item */
+.gen-nav-item:hover {
+  border-bottom-color: #fed766; /* Change border color on hover */
+}
+
+/* Hover effect for .gen-nav-item.active (for active state) */
+.gen-nav-item.active:hover {
+  border-bottom-color: #fed766; /* Ensure active border color is consistent */
+}
+
+/* Hover effect for .loading-indicator and .loading-comic-indicator */
+.loading-indicator:hover, .loading-comic-indicator:hover {
+  cursor: default; /* Change cursor to default when hovering over the loading screen */
+}
+/* Hover effect for .box */
+.box:hover {
+  background-color: #076065; /* Change background color on hover */
+  border-color: #fff; /* Change border color on hover */
+  color: #fff; /* Change text color on hover */
+}
+
+/* Optional: Add active state effect if needed */
+.box:active {
+  background-color: #076065; /* Slightly darker background when clicked */
+  border-color: #ccc; /* Lighter border color when clicked */
+}
+
+/* Existing CSS remains unchanged */
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .gen-container {
+    flex-direction: column; /* Stack the left and right sections vertically */
+    height: auto; /* Adjust height to fit content */
+    overflow: visible; /* Allow overflow for vertical layout */
+  }
+
+  .gen-left,
+  .gen-right {
+    width: 90%; /* Ensure both sections take full width */
+    border: none; /* Remove the border between left and right sections */
+  }
+
+  .gen-right {
+    padding: 10px; /* Adjust padding for smaller screens */
+  }
+
+  .gen-navbar{
+    width:90%;
+  }
+
+  .gen-head {
+    font-size: 1.5rem; /* Adjust font size for smaller screens */
+    margin-left: 0; /* Remove left margin */
+    text-align: center; /* Center align text */
+  }
+
+  .boxes-container {
+    flex-direction: column; /* Stack the boxes vertically */
+    align-items: center; /* Center align items horizontally */
+  }
+
+  .box-wrapper {
+    margin: 10px 0; /* Adjust margin for vertical stacking */
+  }
+
+  .generatebg {
+    width: 100%; /* Ensure background image takes full width */
+    height: auto; /* Adjust height to maintain aspect ratio */
+    position: relative; /* Ensure proper positioning */
+    top: auto; /* Reset top positioning */
+    right: auto; /* Reset right positioning */
+  }
+
+  .gen-button {
+    width: 100%; /* Ensure button takes full width */
+    position: static; /* Reset position for stacking */
+    top: auto; /* Reset top positioning */
+    right: auto; /* Reset right positioning */
+    margin-top: 10px; /* Add margin for spacing */
+  }
+
+  .gen-left form,
+  .story-board-tab {
+    width: 100%; /* Ensure forms take full width */
+  }
+
+  .scene-textbox {
+    width: 100%; /* Ensure textareas take full width */
+  }
+}
